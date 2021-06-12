@@ -1,0 +1,603 @@
+/* Start Variables */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --iesb: hsl(217, 28%, 15%);
+    --main-background: hsl(218, 28%, 13%);
+    --footer-background: hsl(216, 53%, 9%);
+    --testimonials-background: hsl(219, 30%, 18%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --error: hsla(0, 100%, 63%);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+body {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif
+}
+a {
+    text-decoration: none
+}
+ul {
+    list-style: none
+}
+ img {
+   max-width: 100%
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px
+}
+/* Small */
+@media (min-width:768px){
+    .container{
+        width:750px
+    }
+
+}
+/* Medium */
+@media (min-width:992px){
+    .container{
+        width:970px
+    }
+
+}
+/* Large */
+@media (min-width:1200px){
+    .container{
+        width:1170px
+    }
+
+}
+/* End Global Rules */
+/* Start Header */
+header {
+    background-color: var(--iesb);
+    padding: 40px;
+    font-family: 'Raleway', sans-serif;
+    min-height: 134vh
+}
+header::after {
+    content: '';
+    position: absolute;
+    background-image: url(../Images/bg-curvy-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 449px;
+    bottom: -355px;
+    left: 0
+}
+@media (max-width:375px) {
+    header {
+        padding: 20px;
+        min-height: initial
+    }
+    header .logo img {
+        width: 80px
+    }
+    header::after {
+        background-image: url(../Images/bg-curvy-mobile.svg);
+        height: 141px;
+        bottom: 21px;
+        background-size: contain
+    }
+}
+header .container > div:not(.intro) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px
+}
+header .container nav {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+header .container nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse
+}
+header .container nav ul li {
+    padding: 0 0 0 20px
+}
+header .container nav ul li a {
+    color: var(--white)
+}
+header .container nav ul li a:hover {
+    border-bottom: 1px solid var(--white);
+    font-weight: bold
+}
+header .container .intro {
+    text-align: center;
+    color: var(--white)
+}
+@media (max-width: 375px) {
+    header .container .intro .image {
+        margin-bottom: 50px 
+    }
+}
+header .container .intro .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    position: relative;
+    z-index: 1
+}
+header .container .intro .text-content h1 {
+    width: 50%;
+    line-height: 1.6;
+    margin-bottom: 20px
+}
+@media (max-width: 375px) {
+    header .container .intro .text-content h1 {
+        width: 100%;
+        font-size: 23px
+    }
+}
+header .container .intro .text-content p {
+    width: 38%;
+    line-height: 1.6;
+    margin-bottom: 20px
+}
+@media (max-width: 375px) {
+    header .container .intro .text-content p {
+        width: 100%
+    }
+}
+header .container .intro .text-content .link {
+    padding: 15px 70px
+}
+@media (max-width: 375px) {
+    header .container .intro .text-content .link {
+        padding: 15px 0;
+        width: 80%
+    }
+}
+header .container .intro .text-content a {
+    padding: inherit;
+    font-weight: bold;
+    color: var(--white);
+    background: -webkit-linear-gradient(45deg, var(--cyan), var(--blue));
+    background: -moz-linear-gradient(45deg, var(--cyan), var(--blue));
+    background: -o-linear-gradient(45deg, var(--cyan), var(--blue));
+    background: linear-gradient(45deg, var(--cyan), var(--blue));
+    border-radius: 30px
+}
+@media (max-width: 375px) {
+    header .container .intro .text-content a {
+        display: block
+    }
+}
+header .container .intro .text-content a:hover {
+    background: var(--cyan)
+}
+/* End Header */
+/* Start Main */
+main {
+    background-color: var(--main-background);
+    position: relative;
+    color: var(--white)
+}
+main .container .section-01{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 35px;
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 20px
+}
+@media (max-width: 375px) {
+    main .container .section-01 {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 60px
+    }
+}
+main .container .section-01 .box .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+main .container .box .text-content h3 {
+    line-height: 2.6;
+    font-weight: normal
+}
+main .container .section-01 .box .text-content p {
+    line-height: 1.6;
+    font-weight: normal;
+    width: 63%
+}
+@media (max-width: 375px) {
+    main .container .section-01 .box .text-content p {
+        width: 100%
+    }
+}
+/* End Section-01 */
+/* Start Section-02 */
+main .container .section-02 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    margin-bottom: 100px
+}
+@media (max-width: 375px) {
+    main .container .section-02 {
+        flex-direction: column;
+        padding: 20px
+    }
+}
+main .container .section-02 .image {
+    flex-basis: 50%;
+    margin-right: 30px
+}
+@media (max-width: 375px) {
+    main .container .section-02 .image {
+        margin-bottom: 30px;
+        margin-right: initial
+    }
+}
+main .container .section-02 .text-content {
+    flex-basis: 50%;
+    font-family: 'Raleway', sans-serif
+}
+main .container .section-02 .text-content h1 {
+    width: 50%;
+    margin-bottom: 10px
+}
+@media (max-width: 375px) {
+    main .container .section-02 .text-content h1 {
+        width: 100%;
+        font-size: 18px
+    }
+}
+main .container .section-02 .text-content p {
+    line-height: 1.6;
+    margin-bottom: 10px
+}
+main .container .section-02 .text-content .links {
+    position: relative;
+    display: inline-block
+}
+main .container .section-02 .text-content .links a span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--cyan);
+    border-radius: 50%;
+    right: -22px;
+    bottom: 3px
+}
+main .container .section-02 .text-content .links a::after {
+    width: 118%;
+    content: "";
+    position: absolute;
+    background-color: var(--cyan);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+}
+main .container .section-02 .text-content .links a {
+    color: var(--cyan);
+    font-family: 'Open Sans', sans-serif;
+}
+
+main .container .section-02 .text-content .links a:hover {
+     color: var(--white);
+ }
+ 
+main .container .section-02 .text-content .links a:hover span {
+    background-color: var(--white)
+}
+main .container .section-02 .text-content .links a:hover::after {
+     background-color: var(--white)
+ }
+/* End Section-02 */
+/* Start Testimonials */
+main .container .testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+    position: relative
+}
+@media (max-width: 375px) {
+    main .container .testimonials {
+        flex-direction: column;
+        padding: 20px
+    }
+}
+main .container .testimonials::before {
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 12px;
+    background-image: url(../Images/bg-quotes.png);
+    width: 55px;
+    height: 45px
+}
+@media (max-width: 375px) {
+    main .container .testimonials::before {
+        left: 10px;
+        top: -10px;
+    }
+}
+main .container .testimonials .box {
+    background-color: var(--testimonials-background);
+    margin-right: 30px;
+    border-radius: 4px;
+    padding: 30px 20px;
+    position: relative 
+}
+@media (max-width: 375px) {
+    main .container .testimonials .box {
+        margin-right: initial;
+        margin-bottom: 30px
+    }
+}
+main .container .testimonials .box:last-child {
+    margin-right: 0
+}
+main .container .testimonials .box .details img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px
+}
+main .container .testimonials .box p {
+    margin-bottom: 20px;
+    line-height: 1.6
+}
+main .container .testimonials .box .details {
+    display: flex;
+    align-items: center
+}
+main .container .testimonials .box .details .detail h4 {
+    font-weight: normal
+}
+main .container .testimonials .box .details .detail span {
+    font-size: 12px;
+    color: var(--white);
+    font-family: 'Ralewy', sans-serif;
+}
+/* End Testimonials */
+/* Start Sign-Up */
+main .container .sign-up .box {
+    padding: 20px 65px;
+    background-color: var(--iesb);
+    text-align: center;
+    position: relative;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 4px
+}
+@media (max-width: 375px) {
+    main .container .sign-up .box {
+        padding: 20px 0;
+        width: 100%
+    }
+}
+main .container .sign-up .box .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+main .container .sign-up .box .text-content h1 {
+    line-height: 2.6
+}
+main .container .sign-up .box .text-content p {
+    width: 85%;
+    line-height: 1.6;
+    margin-bottom: 15px
+}
+main .container .sign-up .box form input {
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-right: 20px
+}
+main .container .sign-up .box form input[type="email"] {
+    width: 65%
+}
+main .container .sign-up .box form input[type="submit"] {
+    width: 30%;
+    background: -webkit-linear-gradient(45deg, var(--cyan), var(--blue));
+    background: -moz-linear-gradient(45deg, var(--cyan), var(--blue));
+    background: -o-linear-gradient(45deg, var(--cyan), var(--blue));
+    background: linear-gradient(45deg, var(--cyan), var(--blue));
+    margin-right: 0;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px
+}
+@media (max-width: 375px) {
+    main .container .sign-up .box form input[type="submit"],
+    main .container .sign-up .box form input[type="email"] {
+        width: 88%;
+        margin-right: initial;
+        margin-bottom: 20px
+    }
+}
+main .container .sign-up .box form input[type="submit"]:hover {
+    background: var(--cyan)
+}
+main .container .sign-up .box form span {
+    visibility: hidden;
+    display: flex;
+    margin-left: 30px;
+    color: var(--error);
+    margin-top: 10px;
+    font-size: 12px
+}
+main .container .sign-up .box form:invalid span {
+    visibility: visible
+}
+/* End Sign-Up */ /* End Main */
+/* Start Footer */
+footer {
+    background-color: var(--footer-background);
+    padding: 200px 50px 100px
+}
+@media (max-width: 375px) {
+    footer {
+        padding: 200px 20px 100px
+    }
+}
+footer .logo {
+    margin-bottom: 25px
+}
+footer .details {
+    display: flex
+}
+@media (max-width: 375px) {
+    footer .details {
+        flex-direction: column
+    }
+}
+footer .details .location {
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    flex-basis: 28%;
+    font-size: 12px;
+    margin-right: 90px
+}
+@media (max-width: 375px) {
+    footer .details .location {
+        margin-right: initial;
+        margin-bottom: 20px
+    }
+}
+footer .details .location img {
+    width: 13px;
+    height: 18px;
+    margin-right: 20px
+}
+footer .details .location p {
+    line-height: 1.6;
+    margin-top: -4px
+}
+footer .details .contuct {
+    font-size: 12px;
+    flex-basis: 23%;
+    color: var(--white);
+    margin-bottom: 50px
+}
+footer .details .contuct .tele {
+    margin-bottom: 15px
+}
+footer .details .contuct img {
+    margin-right: 15px
+}
+footer .details ul {
+    display: grid;
+    flex-basis: 12%;
+    row-gap: 15px
+}
+@media (max-width: 375px) {
+    footer .details ul {
+        margin-bottom: 40px
+    }
+}
+footer .details ul li a {
+    color: var(--white)
+}
+footer .details ul li a:hover {
+    font-weight: bold
+}
+footer .details .social-links {
+    flex-basis: 23%;
+    text-align: center
+}
+footer .details .social-links .social i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    font-size: 18px;
+    line-height: 38px;
+    margin-right: 15px;
+    color: var(--white);
+    cursor: pointer
+}
+
+footer .details .social-links .social i:hover {
+    border-color: var(--cyan);
+    color: var(--cyan)
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: var(--white);
+    word-spacing: 3px;
+}
+.copyright a:first-child {
+    color: var(--cyan)
+}
+a.author {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    border-radius: 4px;
+    display: inline-block
+}
+a.author::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--iesb);
+    opacity: 0.5;
+    transition: 0.3s;
+    border-radius: inherit
+}
+a.author:hover::after {
+    opacity: 1
+}
+a.author i {
+    animation-name: buzz;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    position: relative;
+    z-index: 1
+
+}
+@keyframes buzz {
+    0% {
+        color: var(--cyan)
+    } 
+    25% {
+        color: var(--blue)
+    }
+    50% {
+        color: #e24849
+    }    
+    75% {
+        color: #182f39
+    }
+}
+@media (max-width: 375px) {
+    footer .copyright .box a {
+        display: inline-block;
+        margin-bottom: 25px
+    }
+}
+/* End Footer */
